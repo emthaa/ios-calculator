@@ -26,7 +26,7 @@ html,body{
 
 
 
-.shown-number{
+.current{
     display: flex;
     justify-content: flex-end;
     font-size: 100px;
@@ -91,3 +91,25 @@ button{
     border: #FF9500;
     color: white;
 }
+
+
+.clear:hover,.negative:hover,.percent:hover{
+    background-color:#f1f1f1 ;
+    border: #f1f1f1;
+}
+
+
+
+
+
+.number:hover,.decimal:hover,#zero:hover{
+    background-color: #9c9c9c;
+    border:#9c9c9c;
+}
+
+
+.equal:hover,.operator:hover{
+    background-color: #ffb854 ;
+    border: #ffb854;
+}
+
