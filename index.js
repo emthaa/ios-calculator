@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded",function(){
     let clear = document.querySelector('.clear');
     let equal = document.querySelector('.equal')
     let decimal = document.querySelector('.decimal')
+    let negative = document.querySelector('.negative')
+    let percent = document.querySelector('.percent')
 
     let numbers = document.querySelectorAll('.number')
     let operators = document.querySelectorAll('.operator')
@@ -45,6 +47,16 @@ document.addEventListener("DOMContentLoaded",function(){
     })
     decimal.addEventListener('click',function(){
         addDecimal()
+    })
+
+    negative.addEventListener('click',function(){
+        handleNegative()
+
+    })
+
+    percent.addEventListener('click',function(){
+        handlePercent()
+
     })
 })
 
@@ -93,4 +105,19 @@ function addDecimal(){
         currentValue += '.';
     }
     
+}
+
+
+function handleNegative(){
+    if(!currentValue.includes("-")){
+        currentValue = '-' + currentValue;
+    }else if(currentValue.includes("-")){
+        currentValue = currentValue.replace('-',"")
+    }
+}
+
+
+function handlePercent(){
+    currentValue /= 100
+    currentValue = currentValue.toString()
 }
